@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maharana Pratap </title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Maharana Pratap </h1>
+        </header>
+        <main>
+            <section class="intro">
+                <h2>About <span id="personName"></span></h2>
+                <p id="personInfo">
+                    <!-- {Person's Name} is an incredible individual who inspires me in many ways. 
+                    {Write about their admirable qualities and the impact they've had on your life.} -->
+                </p>
+            </section>
+            <section class="qualities">
+                <h2>Maharana Pratap</h2>
+                <ul id="qualitiesList">
+                    <!-- <li>{Quality 1}</li>
+                    <li>{Quality 2}</li>
+                    <li>{Quality 3}</li> -->
+                    <!-- Add more qualities here -->
+                </ul>
+            </section>
+            <section class="images">
+                <h2>Images</h2>
+                <div class="image-gallery">
+                    <!-- Add images here -->
+                    <img src="https://resanskrit.com/cdn/shop/products/image_2021-09-15_161131.png?v=1631702545" alt="Poster">
+                </div>
+            </section>
+        </main>
+        <footer>
+            <p>Created with love by Abhay Gupta</p>
+        </footer>
+    </div>
+
+    <script>
+        // JavaScript to add person's name and qualities
+        const personName = "Maharana Pratap";
+        const personQualities = [
+            "Brave",
+            "Determined",
+            "Courageous",
+            "Inspiring"
+            // Add more qualities here
+        ];
+
+        document.getElementById("personName").innerText = personName;
+        document.getElementById("personInfo").innerText = `Maharana Pratap was a brave and determined leader from Rajasthan, India. He fought fearlessly to protect his people and land from a powerful empire that wanted to control them. Despite facing huge challenges, he never gave up. His courage and determination inspire people even today. Maharana Pratap's story is a reminder that bravery and standing up for what is right can make a big difference in the world.`;
+
+        const qualitiesList = document.getElementById("qualitiesList");
+        personQualities.forEach(quality => {
+            const li = document.createElement("li");
+            li.innerText = quality;
+            qualitiesList.appendChild(li);
+        });
+
+        // To add the Wikipedia link
+        const wikipediaLink = "https://hi.wikipedia.org/wiki/%E0%A4%AE%E0%A4%B9%E0%A4%BE%E0%A4%B0%E0%A4%BE%E0%A4%A3%E0%A4%BE_%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%A4%E0%A4%BE%E0%A4%AA";
+        const wikipediaAnchor = document.createElement("a");
+        wikipediaAnchor.href = wikipediaLink;
+        wikipediaAnchor.innerText = "Read more on Wikipedia";
+        wikipediaAnchor.setAttribute("target", "_blank");
+        document.getElementById("personInfo").appendChild(wikipediaAnchor);
+    </script>
+</body>
+</html>
